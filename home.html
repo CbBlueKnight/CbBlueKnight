@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="logout.css">
+    <title>StemWard</title>
+</head>
+<body>
+    <style>
+        header {
+            background: url(img/earth.gif);
+            background-size: cover;
+            background-position: center;
+            min-height: 1000px;
+        }
+    </style>
+
+    <!-- navbar-->
+    <header>
+        <nav class="nav-wrapper grey darken-4">
+            <div class="container">
+                <a href="home.html" class="brand-logo">StemWard</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Stem Warriors</a></li>
+                    <li><a href="#">Feature Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" id="logout" class="hidden">Logout</a></li>
+                </ul>
+                <ul class="sidenav grey lighten-2" id="mobile-menu">
+                    <li><a href="#">Stem Warriors</a></li>
+                    <li><a href="#">Feature Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" id="logout" class="hidden">Logout</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+    <h1 id="welcome">Welcome</h1>
+
+<script>
+    var user = localStorage.getItem("user");
+    if (user){
+        var parsedUser = JSON.parse(user);
+        document.getElementById(
+            "welcome"
+        ).innerHTML = `welcome ${parsedUser.name}`;
+        document.getElementById("logout").classList.remove("hidden");
+    }
+
+    document.getElementById("logout").addEventListener("click", function() {
+        localStorage.removeItem("user");
+        window.location.href = "login.html";
+    });
+</script>
+<script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax();
+        $('.tabs').tabs();
+    });
+    </script>
+</body>
+</html>
