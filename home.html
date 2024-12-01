@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head id="welcome">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/materialize.min.css">
-    <title id="welcome">StemWard</title>
+    <title>StemWard</title>
 </head>
     <style>
         body {
@@ -53,7 +53,7 @@
         }
     </style>
 
-    <!-- header/navbar-->
+<!-- header/navbar-->
      <header>
         <nav class="nav-wrapper transparent">
             <div class="container">
@@ -115,16 +115,33 @@
         </nav>
     </header>
 
-    <!-- body -->
+<!-- body -->
 <body>
     <div class="black-text container">
         <div class="col s12"  id="home">
-            <h2 class=" black-text center">StemWard</h2>
+            <h2 class="black-text">StemWard</h2>
             <h5>Your strive to become a stem warrior!</h5>
             <p>Do you want to discover where STEM education may lead you in the future? Do you wish to know the benefits of studying STEM? Do you want to learn about and witness what STEM students have gone through? Well, you've come to the right place. <br>
             Welcome to STEMWARD : Your strive to become a STEM warrior. Here, you'll find the answers to the questions you have in mind regarding STEM. You will learn different things about STEM and us, STEM students, that will help you become a strong and brave STEM warrior.</p>
             <p>STEMWARD is a website that encourages students, particularly grade 10, to choose the STEM strand. In here we can give you information about the possible careers, advantages and experiences of STEM students that might help you in choosing the right strand. This website could also help you find ways to deal with the struggles of being a STEM student by sharing our experiences and by answering questions that you might have. It would be our pleasure to assist and guide you in your STEM path in the future. </p>
             <p>The name STEMWARD came from the words 'STEM' meaning Science, Technology, Engineering and Mathematics, and the word 'ward' that is used for giving a sense of direction. Hence, this website is made to develop STEM warriors that keeps on moving forward while facing the challenges of being a STEM student.</p>
+             
+<!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Get Started</a>
+
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Get Started</h4>
+      <p>A learning and development strategy known as STEM incorporates the fields of science, technology, engineering, and mathematics. Students learn crucial competencies such as problem-solving, creativity, critical analysis, teamwork, independent thinking, initiative, communication, and digital literacy through STEM (Government of Western Australia, n.d). Additionally, this strand encourages students to learn by engagement in projects that have real-world applications. This method enables pupils to participate actively while learning (Lutkevich, 2022). STEM helps students build strong work ethics, prepares them for careers, and creates professionals. It also includes a wide variety of experiences and abilities. A well-rounded education benefits greatly from each STEM component. Learners who study science gain a thorough awareness of their surroundings. It aids in their development of critical thinking and research skills. Young people are more equipped to operate in a high-tech workplace thanks to technology. Students can develop their problem-solving abilities and apply their knowledge to new tasks by studying engineering. People can use mathematics to examine information, fix mistakes, and consciously choose solutions (Study in the USA, 2021). Overall, STEM equips people with the abilities to prosper and adapt to this rapidly changing world. the right place.</p>
+      <h5>Are you ready to be part of our Team?</h5>
+
+    </div>
+    <div class="modal-footer">
+        <a onclick="M.toast({html: 'Thank you for your Response'})" class="modal-close waves-effect waves-green btn-flat">No</a>
+        <a onclick="M.toast({html: 'Thank you for your Response'})" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+    </div>
+  </div>
         </div>
         <div id="warriors">
             <h2 class="black-text text-darken-4 center">StemWarriors</h2>
@@ -743,7 +760,8 @@
             </section>    
         </div>
     </div>
-    <!-- footer-->
+    
+<!-- footer-->
     <footer class="page-footer black">
         <div class="container">
           <div class="row">
@@ -785,7 +803,7 @@
       </footer>
 </body>
 
-    <!-- java -->
+<!-- java -->
 <script>
     var user = localStorage.getItem("user");
     if (user){
@@ -835,6 +853,7 @@ $(document).ready(function(){
     $('.tooltipped').tooltip();
     $('.datepicker').datepicker();
     $('.collapsible').collapsible();
+    $('.modal').modal();
 });
 </script>
 
