@@ -6,44 +6,786 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/materialize.min.css">
-    <link rel="stylesheet" href="logout.css">
-    <title>StemWard</title>
+    <title id="welcome">StemWard</title>
 </head>
-<body id="welcome">
     <style>
-        header {
-            background: url(img/earth.gif);
+        body {
+            background: url(img/lakeside-day.png);
             background-size: cover;
             background-position: center;
-            min-height: 1000px;
+            background-repeat: no-repeat;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        .dark-mode {
+            background: url(img/lakeside-night.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            color: white;
+        }
+        .tabs .tab a:focus,
+        .tabs .tab a:focus.active {
+            height: 62px;
+        }
+        .tabs .tab a:hover,
+        .tabs .tab a.active {
+            height: 62px;
+        }
+        a:focus, .tabs .tab a:focus.active {
+            padding-top: 12px;
+        }
+        .tabs {
+            height: 65px;
+        }
+        .tabs .indicator {
+            background-color: cyan;
+        }
+        .tabs .tab a{
+            padding-top: 9px;
         }
     </style>
 
-    <!-- navbar-->
-    <header>
-        <nav class="nav-wrapper grey darken-4">
+    <!-- header/navbar-->
+     <header>
+        <nav class="nav-wrapper transparent">
             <div class="container">
-                <a href="home.html" class="brand-logo">StemWard</a>
+                <a href="home.html" class="brand-logo black-text">StemWard</a>
                 <a href="#" class="sidenav-trigger" data-target="mobile-menu">
                     <i class="material-icons">menu</i>
                 </a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Stem Warriors</a></li>
-                    <li><a href="#">Feature Articles</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#" id="logout" class="hidden">Logout</a></li>
-                </ul>
+                <div class="row">
+                    <div class="col s12 l6 right">
+                        <ul class="tabs transparent hide-on-med-and-down">
+                            <li class="tab col s2">
+                                <a href="#home" class="tooltipped white-text" data-tooltip="Home"><i class="material-icons small">home</i></a>
+                            </li>
+                            <li class="tab col s2">
+                                <a href="#warriors" class="tooltipped white-text" data-tooltip="Warriors"><i class="material-icons">group</i></a>
+                            </li>
+                            <li class="tab col s2">
+                                <a href="#article" class="tooltipped white-text" data-tooltip="Article"><i class="material-icons">description</i></a>
+                            </li>
+                            <li class="tab col s2">
+                                <a href="#contacts" class="tooltipped white-text" data-tooltip="Contacts"><i class="material-icons">contacts</i></a>
+                            </li>
+                            <li class="tab col s3">
+                                <a href="#" id="out" class="tooltipped hidden red-text darken-4" data-tooltip="Logout">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <ul class="sidenav grey lighten-2" id="mobile-menu">
-                    <li><a href="#">Stem Warriors</a></li>
-                    <li><a href="#">Feature Articles</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#" id="logout" class="hidden">Logout</a></li>
+                    <div class="row">
+                        <div class="col s12 l6 right">
+                            <ul class="tabs transparent">
+                                <li class="tab col s2">
+                                    <a href="#home" class="tooltipped" data-tooltip="Home"><i class="material-icons">home</i></a>
+                                </li>
+                                <li class="tab col s2">
+                                    <a href="#warriors" class="tooltipped" data-tooltip="Warriors"><i class="material-icons">group</i></a>
+                                </li>
+                                <li class="tab col s2">
+                                    <a href="#article" class="tooltipped" data-tooltip="Article"><i class="material-icons">description</i></a>
+                                </li>
+                                <li class="tab col s2">
+                                    <a href="#contacts" class="tooltipped" data-tooltip="Contacts"><i class="material-icons">contacts</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 l6 left">
+                            <ul class="tabs transparent">
+                                <li class="tab col s3">
+                                    <a href="#" id="logout" class="tooltipped hidden red-text" data-tooltip="Logout">Logout</a>
+                                </li>
+                            </ul>
+                        </div>   
+                    </div>
                 </ul>
             </div>
-            
         </nav>
     </header>
 
+    <!-- body -->
+<body>
+    <div class="black-text container">
+        <div class="col s12"  id="home">
+            <h2 class=" black-text center">StemWard</h2>
+            <h5>Your strive to become a stem warrior!</h5>
+            <p>Do you want to discover where STEM education may lead you in the future? Do you wish to know the benefits of studying STEM? Do you want to learn about and witness what STEM students have gone through? Well, you've come to the right place. <br>
+            Welcome to STEMWARD : Your strive to become a STEM warrior. Here, you'll find the answers to the questions you have in mind regarding STEM. You will learn different things about STEM and us, STEM students, that will help you become a strong and brave STEM warrior.</p>
+            <p>STEMWARD is a website that encourages students, particularly grade 10, to choose the STEM strand. In here we can give you information about the possible careers, advantages and experiences of STEM students that might help you in choosing the right strand. This website could also help you find ways to deal with the struggles of being a STEM student by sharing our experiences and by answering questions that you might have. It would be our pleasure to assist and guide you in your STEM path in the future. </p>
+            <p>The name STEMWARD came from the words 'STEM' meaning Science, Technology, Engineering and Mathematics, and the word 'ward' that is used for giving a sense of direction. Hence, this website is made to develop STEM warriors that keeps on moving forward while facing the challenges of being a STEM student.</p>
+        </div>
+        <div id="warriors">
+            <h2 class="black-text text-darken-4 center">StemWarriors</h2>
+            <p>Here you will find all the stem students who contributed in the creation of this website. You will also know a bit of information about them.</p>
+            <section class="container section">
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/jen.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Jen Reyes<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/profile.php?id=100086070857350" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/kfo_kfmmz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Jen<i class="material-icons right">close</i></span>
+                                    <p>During my final year in junior high, choosing a strand wasn't too tough for me as I have already made up my mind to take STEM. I did so for three main reasons. First, it was aligned to what I want to pursue in the future. I have always dreamt of being a successful doctor, and taking STEM would be the best choice. Second, I was part of the STE program during my junior high times. Since I have graduated junior high school in that program, continuing it and taking STEM is recommended by my teachers. It would be a great choice as I would have prior knowledge about the possible lessons we will be taking. Lastly, my family suggested STEM if I was still unsure and undecided. STEM careers are consistently in demand, there are a variety of work options available especially in the Philippines. Hence, taking the STEM strand would be the best course of action. I know I'll face a lot of challenges in the future as a result of choosing this path. However, I've already overcome some of them so I believe I am braver and stronger now to be able to handle problems in the future. If I can accomplish it, I'm sure you can too. Take the STEM strand with me.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/adrian.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Adrian Aguilar<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/adrian.pilapilaguilar" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/dreii_aguilar/?utm_source=ig_web_button_share_sheet" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Andrian<i class="material-icons right">close</i></span>
+                                    <p>Being a former STE student, it is actually not surprising that I am taking this strand. I must admit, however, that I wasn't certain beforehand which strand I ought to pursue. But when our research teacher said before that the STE Program would become meaningless and nonsense if we did not continue on the track it offers, I realized at that point that I should choose STEM as my strand. And as I was considering what our teacher had said before, I came to the realization that the course I wanted to take in college fit into this strand, which is Engineering. My creativity and 21st-century skills were developed when I entered the STEM field. Media and technology literacy, productivity, social skills, communication, adaptability, and initiative are examples of 21st-century skills. Additionally, as we are starting face-to-face sessions again, it develop time management skills that I needed, my communication skills, and critical thinking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/gwen.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Gwen Sianoya<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/gwen.sianoya.7" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Gwen<i class="material-icons right">close</i></span>
+                                    <p>To be honest, choosing STEM strand wasn’t my first choice. So, I did my research about this strand and looked up for the possible career and courses it offers. Some people would say that STEM strand is full of mathematical equations, endlessly solving of numbers, and logical questions. I guarantee you, it’s more than that. The experiences and moments you will have are unexplainable and will surely be part of your journey. So, why STEM? Honestly speaking, I still have no answers to that question yet. I feel like I’m still in the process of acknowledging why I am here. But I know, throughout this journey here in STEM strand I will be able to identify what my inner self seeks and wants and If I were going to give you some advice, it is okay to take your time searching for answers, because you’ll eventually find it along the process.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/cashlley.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Cashlley Buluran<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/casshlleyyyyywww.facebook.com/profile.php?id=100090090366065" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/itsyourjaju_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Cashlley<i class="material-icons right">close</i></span>
+                                    <p>As a former STE student in junior high, I continue the journey that I've started. I'm amazed at how my studies and knowledge have been so broad since I was a junior, and it still amazes me today that I chose STEM. This strand helps me prepare myself for my next step in college; it opens my mind to mostly science and mathematics subjects. Since the path that I'm taking is in the medical field, this strand is a big advantage. I'm afraid of failing, so I strive harder for as long as I can. Work hard, then rest after. Your present self decides what your future self will be.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/rayan.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Rayan Sajuela<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/rayansajuela" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Rayan<i class="material-icons right">close</i></span>
+                                    <p>Growing up, I've always shown interest and fascination in math and science, regardless of how bad I was in those subjects. And I never once gave a thought about what I wanted to be in the future; that is, until one of my cousin shared her dreams of becoming a civil engineer and how she'll be picking the STEM strand in SHS. She explained to me how STEM was a strand for people who are aspiring to be future engineers, doctors, scientists, etc. I was inspired by her goals and decided to become an engineer in the future, as well. Fast forward -- 2 years later, here I am in STEM. A semester has passed, and this strand has certainly shaped me into a better and smarter student. The amount of challenges that STEM has thrown at me was overwhelming, but in the end, I made it. Here's what I've got to say for those who are afraid of taking this strand — don't be intimidated by the immense pressure that STEM will give you; pressure makes diamonds, after all.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/roj.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Roj Pura<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/rojerich.2005" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/rojiekun" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Roj<i class="material-icons right">close</i></span>
+                                    <p>As a student during my junior high school year i have been interested in technology i often watch tech videos to learn more about a specific gadget like a phone or laptops my interest in technology grew more and more as time goes by during my last year in junior high i had to choose a strand that i need to take for the next chapter of my life since i have a habit of finding out whats inside of a gadget and how it works i decided that i wanted to be a mechanical engineer so i choose STEM for my strand which provided me with the knowledge i will need for college like Math, Science, English and etc. These 3 core subjects is very important when applying for a university in college and STEM will provide it for you since STEM offers you to learn and enhance your knowledge when it comes to these 3 core subject perfect for any course in college</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/ava.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Ava Pablo<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/avaraphaella.pablo" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/aa_bangii?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Ava<i class="material-icons right">close</i></span>
+                                    <p>What are my realizations as a STEM student before and during the school year?
+                                    When I was in 10th grade, choosing my strand was a difficult task. It was stressful knowing that my future career is quite irrelevant to the existing strands at my school. However, some people convinced me that enrolling in STEM will provide me with numerous opportunities, particularly in selecting a college major. STEM can help you develop logical and critical reasoning skills, which will help you come up with potential solutions to real-life problems. This also aids in understanding why and how things work and were created, which is one of the things that pique my curiosity in learning. The exhaustion of being a STEM student is undeniable. Despite the hardships and sacrifices that I must make, in the end, this will be a privilege for me to achieve my goals, as well as a considerable advantage for the world's future.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/santos.jpeg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Apple Santos<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/apple.santos.58152559" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/appleeesss.21?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Apple<i class="material-icons right">close</i></span>
+                                    <p>I enjoy math but am not particularly good at it, so I chose the STEM strand. You will develop an interest in it and pursue your desired career. I'm in this strand because it corresponds to a course I'd like to take in college. I like it because I like learning new and interesting things. The best advice I can give to people looking for STEM strands is to be certain about their decision because STEM is all about analysis and nothing in life is easy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/elaiza.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Elaiza Denise<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/cocoliv.laiz57" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/elaizapcal.dumppp_/?utm_source=ig_web_button_share_sheet" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Elaiza<i class="material-icons right">close</i></span>
+                                    <p>Because I enjoy science and technology, I chose STEM. The strand itself is in line with astronomy, which will be my future field of study and ideal career. The fact that I am also inquisitive and curious about the world makes this strand ideal for me. Students are taught to become more analytical and systematic through the STEM curriculum, which stands for science, technology, engineering, and math. Future medical professionals, engineers, and scientists tend to favor this thread. One benefit of STEM is the many job opportunities it offers to students who choose to major in STEM-related fields in college. Additionally, the topics are quite intriguing and stimulating.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/eljohn.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Eljohn Ricabuerta<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/eljohn.ricabuerta.1" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/iam_elielii?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Eljohn<i class="material-icons right">close</i></span>
+                                    <p>Because I enjoy science and technology, I chose STEM. The strand itself is in line with astronomy, which will be my future field of study and ideal career. The fact that I am also inquisitive and curious about the world makes this strand ideal for me. Students are taught to become more analytical and systematic through the STEM curriculum, which stands for science, technology, engineering, and math. Future medical professionals, engineers, and scientists tend to favor this thread. One benefit of STEM is the many job opportunities it offers to students who choose to major in STEM-related fields in college. Additionally, the topics are quite intriguing and stimulating.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/dennise.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Dennise Lleno<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/denisselhourainelleno.14" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li><a href="https://www.instagram.com/d_lhuoraine?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Dennise<i class="material-icons right">close</i></span>
+                                    <p>As a student i never get tired of trying, im afraid that the days will pass i did nothing to reach my dreams, if i don't explore myself how could i discover what im capable of? STEM strand help me to leave my comfort zone, it challenge me to try new things, and to discover interesting activities. As a normal student who is greatful to have a chance to learn, and experience the challenges within the boundaries, who love exploring myself beyond my own potentials, who take criticism as a way for the betterment and my enthusiasm to grow is infinite. It's an honor to introduce myself I am Denisse Lhuoraine Lleno STEM Students who believe that 'Be more curious than cautious.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/dhane.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Jhanielle<i class="material-icons right">more_vert</i></span>
+                                    <p><li><a href="https://www.facebook.com/beca.ielle" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Dhane<i class="material-icons right">close</i></span>
+                                    <p>I chose the STEM strand because I want to be a nurse someday and to be more educated and fully understand the importance of mathematics in our daily life. I want to take the risk to conquer my own flaws and eventually turn it into my strength. The other factor that urged me to choose this strand, is that I want to expand my learning about how our surroundings work according to their purposes. I am seeking accurate answers to generate better questions. In conclusion, choose this strand to learn more and do more. one of the biggest advantages of the STEM strand rests in its capacity is to set up students for success by preparing them for some of the most demanding yet fulfilling careers in society. Being a STEM student is challenging, I advise, being a STEM student is not just about being smart, it is about how determined you are in the track you've chosen. Ignore all the negative feelings and just enjoy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/arjie.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Arjie Dela Cruz<i class="material-icons right">more_vert</i></span>
+                                <p><li><a href="https://www.facebook.com/profile.php?id=100073478424782" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a></li>
+                                <li><a href="https://www.instagram.com/faulkerson05/?utm_source=ig_web_button_share_sheet" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a></li>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Arjie<i class="material-icons right">close</i></span>
+                                    <p>I am a STEM Student at San Jose National High school. I chose STEM because the path or course that I wanted to take is in the Stem Strand aside from that choosing Stem will help me improve, learn and enhance my skills about the course that im planning to take. To my fellow students that are planning to take the Stem Strand I would like to advice that Stem can be hard, all kinds of strands but in order to achieve your goals in life you need to be hard working student and make sure to make a schedule in order for you to avoid getting pressure, And lastly is to enjoy learning with your friends and classmates!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/milky.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Milkee Benitado<i class="material-icons right">more_vert</i></span>
+                                <p><li><a href="https://www.facebook.com/profile.php?id=100092413032743https://www.facebook.com/profile.php?id=100090090366065" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a></li>
+                                <li><a href="https://www.instagram.com/milkeecharm/?utm_source=ig_web_button_share_sheet" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a></li>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Milkee<i class="material-icons right">close</i></span>
+                                    <p>Before I graduated from junior high school, I'm still uncertain on what track I should be taking. I've always wondered what I wanted to do because I still didn't know anything about it. But at some point STEM track occurs to me which meant a great opportunity for me. The doubts, fear and what if's are always there but once you became part of STEM family (STEMWARD) you don't feel those things anymore rather it will help you grow and teach you a lesson you'll take through out your journey in life, it will outcast your precious achievement and become the better version of you. I am Milkee Charm Benitado a STEM student who will leave a mark "An Opportunities that knock on your door holds a better future".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/328219930_2437411946414609_7725390276812651303_n.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">StemWarrior<i class="material-icons right">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Stem<i class="material-icons right">close</i></span>
+                                    <p>Before I started my Senior High School journey, I was hesitant which strand to choose. So, why STEM? STEM strand offers a lot of possible courses and they said it has a higher privilege if you want to enter prestigious universities but that's not what I'm after. I chose STEM because it is aligned with the future career that I want to achieve. So far, being a STEM student made me realized that this strand is more than what it seems. Despite the stressful nights, endlessly solving mathematical equations, and tiresome weekdays, it’s more than that. I’ve met amazing people with prosperous ambitions just like mine. I’ve learned a lot of things that I could apply in my life. I was anxious entering this strand because my mind is full of what ifs. What if this strand is not meant for me? What if mid-way of the semester, I end up not liking the process of learning? But I did not regret choosing this strand. As a STEM student, I advise everyone to prepare themselves to all hardcore subjects because it’s not easy as it seems especially if some of the areas of the subject is not your forte. Do some advance review of the future topics and be ready. When you’re in doubt of yourself, remember why you’re here today. Look back to all the hardships you’ve been through and how you overcome them. Because, “The future belongs to those who believe in the beauty of their dreams.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="card medium">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/renzo.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Renzo Ilao<i class="material-icons right">more_vert</i></span>
+                                <p><li><a href="https://www.facebook.com/renzochavez.ilao" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a></li>
+                                <li><a href="https://www.instagram.com/shhhh18.05?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="tooltipped btn-floating btn-small pink" data-tooltip="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a></li>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Renzo<i class="material-icons right">close</i></span>
+                                    <p>Before I finished grade 10, I was having a lot of trouble with the strand I was going to take, I was thinking about what I should really take, whether I should study stem or ict, so I thought and asked myself what the my passion and what are the things that make me happy and here I have decided that I should study stem because one of my passions is to give myself plenty of trouble to learn more and another since childhood I really want to math and science, that's one of the reasons why I became a stem student. It's also one of my dreams to become an electrical engineer because I also saw potential in myself in fiddling with electric things. It's also one of my passions and I'm happy. me because everything I did not expect in this strand has come true, I have been faced with many challenges and I have also learned a lot that I have wanted to know for a long time and I am Renzo Chavez Ilao who is very happy because it is an honor to share my experience in STEM.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="article">
+            <h2>Feature Articles</h2>
+            <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">done_all</i>Achievements</div>
+                  <div class="collapsible-body white"><span>
+                    Upon entering STEM many would face difficulties, but it's not that bad. There are students in STEM that achieve something as they progress and graduate from the STEM strand. Here are some achievements that STEM students achieve by taking on the challenge of the STEM strand. 
+                    <br><br>
+                    For me, I observed in myself that, even though it's still not that good, being a STEM student has improved my Math and critical thinking skills. I would say that it may, and will be hard at times, but the self-growth that you will observe will be well worth it.
+                    Matthew Rona - G11 STEM 
+                    <br><br>
+                    STEM helped students improve their overall performance, whether it'd be performing task, completing assignments or homeworks, conducting a research, participating in activities.
+                    <br><br>
+                    Visible growth in one person is achieved within STEM, due to the particular reason of the challenging subjects that will slowly improve a student thinking ability, decision making.
+                    Edward Moran - G11 STEM 
+                    <br><br>
+                    Upon entering STEM, I was able to achieve a better version of myself. I became more eager to learn, more braver and stronger to face future challenges, and developed numerous skills and talents. Therefore, STEM shaped me into who I am today in which I am proud of.
+                    Jen Reyes - G11 STEM 
+                    <br><br>
+                    Is one of the most well known women in the history of STEM fields. She is, so far, the only woman in the field of science to win the Nobel Prize in two separate scientific fields: physics and chemistry.
+                    Marie Skłodowska Curie 
+                    <br><br>
+                    Microsoft co-founder that wrote his first computer software program at age 13. He also gathered a STEM-based group together by gathering programmers together who computerize their high school's payroll system.
+                    Bill Gates 
+                    <br><br>
+                    By taking the STEM strand many personalities achieved great things. As for you who wants to take it you could achieve your goals, dreams, and personal improvement which is the main goal of taking STEM. Make yourself grow and improve by taking STEM. Now that you know what you can have, are you willing to take it?
+                <br><br>
+                - Authors: Eljohn Ricabuerta, Casshlley Buluran</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">place</i>Experience</div>
+                  <div class="collapsible-body white"><span>Students are more likely to enroll in STEM courses in college and potentially choose to work in related professions if they receive better STEM education before that point. In addition, they'll be more assured about their academic endeavors in general and far less inclined to quit.
+                    <br><br>
+                    We must admit that, as Grade 11 STEM students, what we are going through right now is really different from what we were thinking while we were still in junior high school. We encountered several new acquaintances and students, all of whom had unique personalities and traits. When it comes to the activities and performance tasks that I must complete, being a STEM student makes us more patient and responsible. 
+                    <br><br>
+                    For STEM students to successfully complete their given duties, they must be very persistent and determined. They need knowledge and may result in difficulties and challenges in life, but such issues fortify us and have a significant influence on our lives as well as our academic performance. 
+                    <br><br>
+                    We often say that before achieving our goals, we must go through many hardships in life. The STEM experience will be beneficial because it will allow you to learn more about the topics covered and even help you find a stable job in the future. It will also teach you the importance of helping others and the idea that we shouldn't let ourselves or those around us fall behind but rather should be the catalyst for their ascent as well. 
+                    <br><br>
+                    Being a STEM student takes a lot of work, perseverance, and devotion. But underneath all of this, there are a ton of special moments and adventures that add to the excitement of our Grade 11 experience.
+                    <br><br>
+                    In high school, as a STEM student, I discovered the value of projects and homework. I also developed a sense of community, learned how to apply what I had learned, and mentored other STEM students as a result of the excruciating amount of homework. Because you all work together to graduate and attend college, the STEM students have connected like bees in a hive. The coursework was occasionally very challenging, especially during my freshman year. Of course, most STEM students, including me, were under stress. For instance, in computer science, neither I nor anybody else in my class knew how to write the code for our project. I was able to finish the project because a friend who had previously taken the course was able to explain how to write the code.
+                    <br><br>
+                    Due to the difficulty of our subjects and the effort required to pass them, it encourages me to study more seriously. My experience as a grade 11 student was made more difficult by certain topics, such as Statistics and Probability, General Chemistry, and Basic Calculus.
+                    <br><br>
+                    It takes a lot of work, perseverance, and dedication to be a STEM student. But behind all of these, there are a ton of special moments and adventures that have made my time as a grade 11 student more interesting overall.
+                    <br><br>
+                    - Authors: Nandine Elaisha Gayares, Elaiza Denise Gealone</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">trending_up</i>Advantage</div>
+                  <div class="collapsible-body white"><span>Science, Technology, Engineering and Mathematics (STEM) exposes students to more complex mathematics and science concepts and aims to serve as a foundation for their future college degrees. The STEM strand encompasses many subject matters compared with the other SHS strands. Because of this, the students are represented with many concepts and ideas that they can apply to their daily life as well as in their future studies. STEM education gives an understanding of concepts and encourages knowledge application. To keep it short, its aim can be formulated in two simple actions: explore and experience. Given this includes numerous opportunities and skills development, students are free to exercise what they learn and embrace mistakes in a risk-free environment. Project-based learning and problem-solving help learners to form a special mindset. Its core is in flexibility and curiosity, which equips learners to respond to real-world challenges. This article contains the possible opportunity and skills development that will help you enhance the knowledge about STEM, it will give you the idea of the advantages of the STEM strand compared with the other tracks. This article will help you answer the doubts of choosing STEM and will blow your mind upon knowing the content. 
+                    <br><br>
+                    The Science, Technology, Engineering, and Mathematics (STEM) track is a highly technical track that equips students with the skills necessary for pursuing further studies and professions in different fields along the lines of medicine, engineering, economics, and numerous job opportunities. With STEM careers growing, one of the advantages of the STEM strand in senior high school is that graduates can look forward to illustrious careers that directly contribute to building the economy and helping society. One of these is the opportunities that we might get from choosing this track such as having the scholarship; scholarship can help you achieve your education goals, and consequently help you pursue your career goals. Choosing the STEM track opens the door to many possibilities for successful and fruitful careers especially after pursuing further education. Secure highly respected professions in competitive industries by choosing STEM as your track. Equipped with three strands to choose from, the STEM track presents you with opportunities to specialize in.   According to the Department of Education (DepEd) "Skills developed by students through STEM provide them with the foundation to succeed at school and beyond." With the help of the STEM Strand the qualifications of students for the opportunities awaits will be furthermore developed. From that point on, 75% of all the new jobs will require skills that's under the strand of STEM, 90% of jobs will need digital skills.  To sum up everything that has been stated so far, STEM Strand does not only avail scholarship grants, but also the development of potential skills at student's logical reasoning, critical thinking, and problem solving. Therefore with the STEM students' capabilities, the probability of succeeding economic growth will highly adapt to what might happen in the future for the furthermore opportunities awaits. STEM education has a wealth of advantages over traditional education. It teaches digital literacy and helps students develop the right mindset that makes their capabilities illimitable.
+                    <br><br>
+                AUTHORS: Benitado, Milkee Charm &
+                Lleno, Denisse Lhuoraine  </span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">school</i>Feature Careers</div>
+                    <div class="collapsible-body white"><span>Education in STEM extends beyond the classroom. It provides a skill set that controls our thoughts and actions. STEM education, which combines science, technology, engineering, and math, aids in resolving the problems that the world is currently facing. Let's examine what STEM means globally and how it affects the growth of our society.
+                        <br><br>
+                        STEM education equips individuals with skills that increase their employability and prepare them to meet the current demand for labor. It includes all of one's knowledge and abilities. A well-rounded education benefits greatly from each STEM component. Students gain a comprehensive understanding of the world around them through science. It aids in their development as researchers and critical thinkers. Young people can work in an environment that is full of high-tech innovations thanks to technology. Students can learn how to solve problems and put their knowledge to use in new projects with engineering. When designing solutions, people are able to analyze data, spot errors, and deliberate choices thanks to mathematics. STEM education integrates these fields into a single system. As a result, professionals are prepared to transform society through innovative and long-term solutions.
+                        <br><br>
+                        One of the four tracks in the academic track of the senior high school curriculum in the Philippines is called the STEM Strand, which stands for science, technology, engineering, and mathematics. A STEM education curriculum gets pupils ready for STEM-related college coursework. STEM may be the best strand for you in SHS if you have a preference or talent for studying math, science, or engineering.
+                        <br><br>
+                        STEM is an engaging and difficult area of study. The good news is that it can aid in your career preparation for occupations with high paying potential. STEM positions are in high demand today, providing graduates with a wide range of professional options. Following completion of the STEM strand, the following STEM-related occupations may interest you.
+                        <br><br>
+                        Some excellent STEM occupations, like those of a welder or a manufacturing technician, just require an industry certification or a two-year degree. However, the vast majority of STEM occupations call for post-secondary education.
+                        <br><br>
+                        The STEM fields are fascinating and difficult.
+                        <br><br>
+                        They can aid in preparing you for jobs in relatively plentiful and well-paying industries. For students with post-secondary education, STEM jobs are growing faster than non-STEM jobs. Additionally, the problem-solving and critical thinking abilities acquired when studying STEM courses are transferable to practically all occupations and are really in demand for the majority of them.
+                        <br><br>
+                    A partial list of STEM careers includes:
+                    <br>
+                    -Medical doctors
+                    <br>
+                    -Dentists
+                    <br>
+                    -Health Care Professionals
+                    <br>
+                    -Engineers
+                    <br>
+                    -Scientists
+                    <br>
+                    -Agriculture
+                    <br>
+                    -Statisticians
+                    <br>
+                    -Architects
+                    <br>
+                    -Computer Technicians
+                    <br>
+                    -Welders
+                    <br>
+                    -Machinists
+                    <br>
+                    -Manufacturing Technologists
+                    <br>
+                    -Electricians
+                    <br><br>
+                    AGRICULTURE
+                    <br>
+                    The purpose of a degree in agriculture is to provide students with technical knowledge of crop raising, pest management, agricultural chemicals, fertilizers, and other tasks associated with crop production and quality control. Aside from that, you will also acquire useful skills in agribusiness, farm management, and raising livestock. Agriculture might be a good choice for you if you consider yourself to be a certified platito or plantita.
+                    <br><br>
+                    Agriculture careers:
+                    <br>
+                    Agriculture Economist
+                    <br>
+                    Agriculture Engineer
+                    <br>
+                    Animal Scientist
+                    <br>
+                    Conservationist
+                    <br>
+                    Farm Manager
+                    <br>
+                    Soil and Crop Scientist
+                    <br><br>
+                    ENGINEERING
+                    <br>
+                    Engineering is the process of making and designing any kind of infrastructure. Yes, we refer to everything, including houses, bridges, cellphones, software, machines, and processes—there is an engineering field just for those things! After graduating from one of these engineering courses and passing the board exam, you can pursue a variety of careers as a licensed engineer. Engineers figure out how things work and find practical uses for scientific discoveries. This is an important role for engineers in the world's adoption of technological innovations.
+                    <br><br>
+                    Engineering careers:
+                    <br>
+                    Civil engineer
+                    <br>
+                    Chemical engineer
+                    <br>
+                    Computer engineer
+                    <br>
+                    Electrical engineering
+                    <br>
+                    Electronics & communication engineer
+                    <br>
+                    Industrial engineer
+                    <br>
+                    Mechanical engineering
+                    <br><br>
+                    HEALTH CARE
+                    <br>
+                    One of the industries that is expanding at the fastest rate not only in the nation but also globally is healthcare. Due to their high demand, health courses have excellent graduate employability rates. There will always be a need for healthcare as long as people live. The fact that choosing a career in healthcare also has a significant impact on the lives of other people makes it a rewarding and highly valued occupation. You might even land a job with a high salary potential if you follow this path. Some in-demand medical careers you might want to think about are as follows:
+                    <br><br>
+                    Healthcare careers:
+                    <br>
+                    Doctor
+                    <br>
+                    Nurse
+                    <br>
+                    Pharmacist
+                    <br>
+                    Physical therapist
+                    <br>
+                    Medical Technologist
+                    <br>
+                    Healthcare Data Scientist
+                    <br><br>
+                    INFORMATION TECHNOLOGY
+                    <br>
+                    Courses in information technology (IT) train students to be experts in computer application installation, operation, development, maintenance, and administration. Its goal is to give students the skills and knowledge they need to use IT concepts and techniques to solve problems. There are a number of positions that deal with the various aspects of information technology, ranging from engineering to tech support. It is likely that students will succeed in these IT careers if they have strong technical skills in addition to skills in data collection and interpretation.
+                    <br><br>
+                    IT careers:
+                    <br>
+                    Software Developer/Engineer
+                    <br>
+                    Web Developer
+                    <br>
+                    Data Scientist
+                    <br>
+                    Systems Administrator
+                    <br>
+                    Systems Engineer
+                    <br>
+                    IT Consultant
+                    <br>
+                    Cloud Architect
+                    <br><br>
+                    MATHEMATICS AND SCIENCE
+                    <br>
+                    The STEM curriculum is centered on science and math. A valuable asset in the government, business, and technology sectors is an impressive aptitude with numbers. Math and science are fundamentally concerned with problem-solving. To complete their work, many professionals rely on the application of mathematical concepts and scientific methods.
+                    <br><br>
+                    Numerous job openings in the fields of mathematics and science can be found as a result of the growing prominence of big data in business, healthcare, and a number of other sectors. You can work in the following professions in this field:
+                    <br><br>
+                    Math careers:
+                    <br>
+                    Mathematician
+                    <br>
+                    Statistician
+                    <br>
+                    College Math Professor
+                    <br>
+                    Actuary
+                    <br>
+                    Market Research Analyst
+                    <br>
+                    Economist
+                    <br>
+                    Aerospace Engineer
+                    <br>
+                    Financial Analyst
+                    <br>
+                    Science careers:
+                    <br>
+                    Physicists
+                    <br>
+                    Chemist
+                    <br>
+                    Biologist
+                    <br>
+                    Other science-specific careers
+                    <br><br>
+                        Pursuing a career in the STEM fields is undoubtedly worthwhile with all of these prospective employment options. The STEM area can be quite difficult, but it's also really thrilling and rewarding. A STEM degree will raise your earning potential, increase your chances of finding employment, and give you vital skills that are applicable to a wide range of professions. If you're still not sure if the STEM strand is suitable for you, take our questionnaire to get suggestions or look through hundreds of programs and institutions to find the best fit.
+                    <br><br>
+                    Advantages of the STEM Strand
+                    <br><br>
+                    The STEM strand gives senior high school students exposure to the intertwining disciplines (Science, Technology, Engineering, and Mathematics) to see how they work in real life. The STEM strand:
+                    <br><br>
+                    -        Builds resilience in a safe environment by allowing students to experiment and to naturally experience failures as part of the learning process
+                    <br>
+                    -        Encourages teamwork so students can find solutions to problems, record data, write reports, give presentations, and more
+                    <br>
+                    -        Teaches kids about the power and importance of technology, especially in today’s digital age
+                    <br>
+                    Fosters a habit of adaption when things don’t go as planned.
+                    <br><br>
+                    AUTHORS: Sianoya, Gwen & 
+                    Dela Cruz, Arjie</span></div>
+                  </li>
+              </ul>
+        </div>
+        <div id="contacts">
+            <section class="container section" id="contact">
+                <div class="row">
+                    <div class="col s12 l6">
+                        <h2 class="indigo-text text-darken-4">Contacts</h2>
+                        <p">Email: <a href="" class="black-text">stemward16@gmail.com</a></p>
+                        <p>Mobile no.: <a href="" class="black-text">09499538024</a></p>
+                        <p>Telephone no.: <a href="" class="black-text"></a></p>
+                        <li><a href="https://www.facebook.com/profile.php?id=100090090366065" class="tooltipped btn-floating btn-small blue darken-3" data-tooltip="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a></li>
+                        <li><a href="https://youtube.com/@stemward?si=LEJJdc6u90DVQ_Xk" class="tooltipped btn-floating btn-small red darken-3" data-tooltip="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a></li>
+                        <li><a href="https://x.com/Stemward16" class="tooltipped btn-floating btn-small blue" data-tooltip="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a></li>
+                    </div>
+                    <div class="col s12 l6">
+                        <div class="input-field">
+                            <i class="material-icons prefix">email</i>
+                            <input type="email" id="email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">message</i>
+                            <textarea name="message" id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Massage</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">date_range</i>
+                            <input type="text" id="date" class="datepicker">
+                            <label for="date">Date</label>
+                        </div>
+                        <div class="input-field center">
+                            <a onclick="M.toast({html: 'Submited Successfully'})" class="btn waves-effect waves-light">Submit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+        </div>
+    </div>
+    <!-- footer-->
+    <footer class="page-footer black">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Inquiries</h5>
+              <p class="grey-text text-lighten-4">Sen. Lorenzo Sumulong Memorial Circumferencial Road, Baranggay San Jose, Antipolo City</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Contacts</h5>
+              <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100090090366065" class="tooltipped btn-floating btn-small blue darken-3 left" data-tooltip="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a></li>
+                <li><a href="https://youtube.com/@stemward?si=LEJJdc6u90DVQ_Xk" class="tooltipped btn-floating btn-small red darken-3 left" data-tooltip="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a></li>
+                <li><a href="https://x.com/Stemward16" class="tooltipped btn-floating btn-small blue left"data-tooltip="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright grey">
+          <div class="container">
+          © 2024 StemWard
+
+<!-- Switch -->
+        <div class="switch right">
+            <label class="black-text">
+                Light Mode
+            <input type="checkbox" onclick="myFunction()">
+            <span class="lever"></span>
+                Dark Mode
+            </label>
+        </div>
+          </div>
+        </div>
+      </footer>
+</body>
+
+    <!-- java -->
 <script>
     var user = localStorage.getItem("user");
     if (user){
@@ -59,15 +801,41 @@
         window.location.href = "index.html";
     });
 </script>
-<script src="js/jquery.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-        $('.materialboxed').materialbox();
-        $('.parallax').parallax();
-        $('.tabs').tabs();
+<script>
+    var user = localStorage.getItem("user");
+    if (user){
+        var parsedUser = JSON.parse(user);
+        document.getElementById(
+            "welcome"
+        ).innerHTML = `welcome ${parsedUser.name}`;
+        document.getElementById("out").classList.remove("hidden");
+    }
+
+    document.getElementById("out").addEventListener("click", function() {
+        localStorage.removeItem("user");
+        window.location.href = "index.html";
     });
-    </script>
-</body>
+</script>
+
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+</script>
+
+<script src="js/jquery.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.materialboxed').materialbox();
+    $('.parallax').parallax();
+    $('.tabs').tabs();
+    $('.tooltipped').tooltip();
+    $('.datepicker').datepicker();
+    $('.collapsible').collapsible();
+});
+</script>
+
 </html>
